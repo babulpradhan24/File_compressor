@@ -37,9 +37,12 @@ These objects are used to handle file input and output operations. The source is
 
 
 ## Performance
-File	      Original	      Compressed	       Reduction
-sample.txt	500 KB	        220 KB            	56%
-log.txt    	1.2 MB	        490 KB	            59%
+
+| File Type | Original Size | Compressed Size | Reduction |
+|-----------|--------------|----------------|-----------|
+| TXT | 500 KB | 220 KB | 56% |
+| CSV | 1 MB | 430 KB | 57% |
+| LOG | 1.2 MB | 490 KB | 59% |
 
 ### Running the Program
 Compile:
