@@ -1,13 +1,13 @@
 # File-Compression-Utility
 We use **Huffman's algorithm** to construct **a tree** that is used for data compression. 
 We assume that each character has an associated weight equal to the number of times the character occurs in a file,
-When compressing a file we'll need to calculate these weights.
+When compressing a file, we'll need to calculate these weights.
 
 ## Huffman Coding Algorithm Description
 
 Huffman's algorithm assumes that we're building a single tree from a group (or forest) of trees. 
 Initially, all the trees have a single node with a character and the character's weight. 
-Trees are combined by picking two trees, and making a new tree from the two trees. 
+Trees are combined by picking two trees and making a new tree from the two trees. 
 This decreases the number of trees by one at each step since two trees are combined into one tree.
 
 ### Algorithm Steps:
@@ -29,14 +29,20 @@ This vector is used to store pointers to Node objects. It is used to represent t
 #### priority_queue<Node*, vector<Node*>, Compare>:
 This priority queue is used to create a min-heap of Node pointers based on their frequencies. It is used during the Huffman tree construction and encoding process.
 #### fstream source, destination: 
-These objects are used to handle file input and output operations. source is used to read data from the source file, and destination is used to write data to the destination file.
+These objects are used to handle file input and output operations. The source is used to read data from the source file, and the destination is used to write data to the destination file.
 
 ## Class diagram
 
-![WhatsApp Image 2023-07-01 at 10 31 46](https://github.com/AnshulRanjan2004/File-Compression-Utility/assets/91585064/2fc7688b-ec56-45f3-adb6-4c3d22ef281f)
+<img width="1600" height="1021" alt="image" src="https://github.com/user-attachments/assets/2951a48e-f0a0-42ae-aabe-0f77b9da6868" />
+
+
+## Performance
+File	      Original	      Compressed	       Reduction
+sample.txt	500 KB	        220 KB            	56%
+log.txt    	1.2 MB	        490 KB	            59%
 
 ### Running the Program
-Complie:
+Compile:
 ```bat
 g++ -o <name-you-want-to-give> main.cpp
 ```
